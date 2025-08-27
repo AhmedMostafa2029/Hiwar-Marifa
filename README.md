@@ -48,6 +48,7 @@ Hiwar Marifa app is a world for Software engineers to chat with each other
 
 ## 🌱 Project Structure
 
+```bash
 > The full folder structure for the lib:      
 > lib       
 ├── main.dart                      # Entry point of the app (runApp, theme, routes, providers)     
