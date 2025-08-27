@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "416833184658",
+    "project_id": "hiwar-marifa",
+    "storage_bucket": "hiwar-marifa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416833184658:android:f83b294325a15f150bd74b",
+        "android_client_info": {
+          "package_name": "com.example.hiwar_marifa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2l99c6BteBpMzbPF_d8wnvsc_VjsTfaI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
