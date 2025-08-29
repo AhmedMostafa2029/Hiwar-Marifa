@@ -50,7 +50,7 @@ Hiwar Marifa app is a world for Software engineers to chat with each other
 
 | Mode (Light)                                | Mode (Dark)                               | Mode (Light)                             | Mode (Dark)                            |
 | ------------------------------------------- | ----------------------------------------- | ---------------------------------------- | -------------------------------------- |
-| ![MessageLight](screenshots/mode_light.png) | ![MessageDark](screenshots/mode_dark.png) | ![ChatLight](screenshots/mode_light.png) | ![ChatDark](screenshots/mode_dark.png) |
+| ![MessageLight](assets/IMG-20250830-WA0023.jpg) | ![MessageDark](assets/IMG-20250830-WA0010.jpg) | ![ChatLight](assets/IMG-20250830-WA0018.jpg) | ![ChatDark](assets/IMG-20250830-WA0028.jpg) |
 
 ---
 
