@@ -1,4 +1,3 @@
-// main.dart
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hiwar_marifa/core/themes/app_theme.dart';

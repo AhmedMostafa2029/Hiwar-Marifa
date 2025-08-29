@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hiwar_marifa/core/constants/constants.dart';
 import 'package:hiwar_marifa/presentation/pages/auth/login_page.dart';
-import 'package:flutter/foundation.dart'; // ليعمل debugPrint
 
 class ProfilePage extends StatefulWidget {
   final ValueChanged<bool> onThemeChanged;
@@ -159,11 +158,11 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                   )
                 : ListTile(
-                    leading: const Icon(Icons.person, color: kPrimaryColor),
+                    leading: const Icon(Icons.person, color: kAccentColor),
                     title: const Text('Username'),
                     subtitle: Text(_currentUsername),
                     trailing: IconButton(
-                      icon: const Icon(Icons.edit, color: kPrimaryColor),
+                      icon: const Icon(Icons.edit, color: kAccentColor),
                       onPressed: () {
                         setState(() {
                           _isEditingUsername = true;
@@ -230,10 +229,10 @@ class _ProfilePageState extends State<ProfilePage> {
         Container(
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color: kPrimaryColor.withOpacity(0.1),
+            color: kAccentColor.withOpacity(0.1),
             shape: BoxShape.circle,
           ),
-          child: Icon(icon, color: kPrimaryColor, size: 24),
+          child: Icon(icon, color: kAccentColor, size: 24),
         ),
         const SizedBox(height: 8),
         Text(
@@ -241,7 +240,7 @@ class _ProfilePageState extends State<ProfilePage> {
           style: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
-            color: kPrimaryColor,
+            color: kAccentColor,
           ),
         ),
         const SizedBox(height: 4),
@@ -367,12 +366,12 @@ class _ProfilePageState extends State<ProfilePage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.logout, size: 26, color: Colors.black),
+            Icon(Icons.logout, size: 26, color: Colors.white),
             SizedBox(width: 20),
             const Text(
               "Logout",
               style: TextStyle(
-                color: Colors.black,
+                color: Colors.white,
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),

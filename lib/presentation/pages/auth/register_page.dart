@@ -293,7 +293,7 @@ class _RegisterPageState extends State<RegisterPage> {
               child: ListTile(
                 title: const Text(
                   'User',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: 14),
                 ),
                 leading: Radio<String>(
                   value: 'user',
@@ -311,7 +311,7 @@ class _RegisterPageState extends State<RegisterPage> {
               child: ListTile(
                 title: const Text(
                   'Admin',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: 14),
                 ),
                 leading: Radio<String>(
                   value: 'admin',

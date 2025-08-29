@@ -112,81 +112,186 @@ class _GroupSettingsPageState extends State<GroupSettingsPage> {
     );
   }
 
+  // Widget _buildBody() {
+  //   return SingleChildScrollView(
+  //     padding: const EdgeInsets.all(16.0),
+  //     child: Column(
+  //       crossAxisAlignment: CrossAxisAlignment.start,
+  //       children: [
+  //         // Group Info Card
+  //         Card(
+  //           elevation: 4,
+  //           child: Padding(
+  //             padding: const EdgeInsets.all(14),
+  //             child: Column(
+  //               crossAxisAlignment: CrossAxisAlignment.start,
+  //               children: [
+  //                 Text(
+  //                   _group!.groupname,
+  //                   style: const TextStyle(
+  //                     fontSize: 24,
+  //                     fontWeight: FontWeight.bold,
+  //                   ),
+  //                 ),
+  //                 //--------------------------------------------------------------
+  //                 const SizedBox(height: 8),
+  //                 _buildInfoRow('Admin', adminEmails[0]),
+  //                 const SizedBox(height: 8),
+  //                 //-----------------------------------------------------------------
+  //                 _buildInfoRow(
+  //                   'Created',
+  //                   _group!.createdAt != null
+  //                       ? _group!.createdAt!.toDate().toString().split(' ')[0]
+  //                       : "Unknown",
+  //                 ),
+  //                 const SizedBox(height: 8),
+  //                 _buildInfoRow('Members', '${_group!.members.length} members'),
+  //               ],
+  //             ),
+  //           ),
+  //         ),
+
+  //         const SizedBox(height: 14),
+
+  //         // Members Section
+  //         Text(
+  //           'Group Members (${_group!.members.length})',
+  //           style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+  //         ),
+  //         const SizedBox(height: 16),
+
+  //         // Members List
+  //         _buildMembersList(),
+
+  //         const SizedBox(height: 20),
+
+  //         // Pending Requests
+  //         if (_group!.pendingMembers.isNotEmpty)
+  //           Column(
+  //             crossAxisAlignment: CrossAxisAlignment.start,
+  //             children: [
+  //               Text(
+  //                 'Pending Requests (${_group!.pendingMembers.length})',
+  //                 style: const TextStyle(
+  //                   fontSize: 20,
+  //                   fontWeight: FontWeight.bold,
+  //                   color: Colors.orange,
+  //                 ),
+  //               ),
+  //               const SizedBox(height: 12),
+  //               _buildPendingRequestsList(),
+  //             ],
+  //           ),
+  //         const SizedBox(height: 115),
+  //         // Admin Controls
+  //         _buildAdminControls(),
+  //       ],
+  //     ),
+  //   );
+  // }
+
   Widget _buildBody() {
-    return SingleChildScrollView(
-      padding: const EdgeInsets.all(16.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Group Info Card
-          Card(
-            elevation: 4,
-            child: Padding(
-              padding: const EdgeInsets.all(14),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    _group!.groupname,
-                    style: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  //--------------------------------------------------------------
-                  const SizedBox(height: 8),
-                  _buildInfoRow('Admin', adminEmails[0]),
-                  const SizedBox(height: 8),
-                  //-----------------------------------------------------------------
-                  _buildInfoRow(
-                    'Created',
-                    _group!.createdAt != null
-                        ? _group!.createdAt!.toDate().toString().split(' ')[0]
-                        : "Unknown",
-                  ),
-                  const SizedBox(height: 8),
-                  _buildInfoRow('Members', '${_group!.members.length} members'),
-                ],
-              ),
-            ),
-          ),
+    return StreamBuilder<DocumentSnapshot>(
+      stream: FirebaseFirestore.instance
+          .collection(kGroupsCollection)
+          .doc(widget.groupId)
+          .snapshots(),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData) {
+          return Center(child: CircularProgressIndicator());
+        }
 
-          const SizedBox(height: 14),
+        if (!snapshot.data!.exists) {
+          return Center(child: Text('Group not found'));
+        }
 
-          // Members Section
-          Text(
-            'Group Members (${_group!.members.length})',
-            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 16),
+        final groupData = snapshot.data!.data() as Map<String, dynamic>;
+        final group = GroupsModel.fromJson({
+          ...groupData,
+          'id': snapshot.data!.id,
+        });
 
-          // Members List
-          _buildMembersList(),
-
-          const SizedBox(height: 20),
-
-          // Pending Requests
-          if (_group!.pendingMembers.isNotEmpty)
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Pending Requests (${_group!.pendingMembers.length})',
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.orange,
+        return SingleChildScrollView(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Group Info Card
+              Card(
+                elevation: 4,
+                child: Padding(
+                  padding: const EdgeInsets.all(14),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        group.groupname,
+                        style: const TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      _buildInfoRow('Admin', adminEmails[0]),
+                      const SizedBox(height: 8),
+                      _buildInfoRow(
+                        'Created',
+                        group.createdAt != null
+                            ? group.createdAt!.toDate().toString().split(' ')[0]
+                            : "Unknown",
+                      ),
+                      const SizedBox(height: 8),
+                      _buildInfoRow(
+                        'Members',
+                        '${group.members.length} members',
+                      ),
+                    ],
                   ),
                 ),
-                const SizedBox(height: 12),
-                _buildPendingRequestsList(),
-              ],
-            ),
-          const SizedBox(height: 115),
-          // Admin Controls
-          _buildAdminControls(),
-        ],
-      ),
+              ),
+
+              const SizedBox(height: 14),
+
+              // Members Section
+              Text(
+                'Group Members (${group.members.length})',
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 16),
+
+              // Members List
+              _buildMembersList(),
+
+              const SizedBox(height: 20),
+
+              // Pending Requests
+              if (group.pendingMembers.isNotEmpty)
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Pending Requests (${group.pendingMembers.length})',
+                      style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.orange,
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    _buildPendingRequestsList(),
+                  ],
+                ),
+              const SizedBox(height: 115),
+
+              // Admin Controls
+              _buildAdminControls(),
+            ],
+          ),
+        );
+      },
     );
   }
 

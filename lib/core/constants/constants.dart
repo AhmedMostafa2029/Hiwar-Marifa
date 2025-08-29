@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-const Color kPrimaryColor = Color(0xff928DAB);
+const Color kPrimaryColor = Color(0xff2E275D);
 const Color kSecondaryColor = Color(0xff1F1C2C);
 const Color kAccentColor = Color(0xff6A5ACD);
 const Color kBackgroundColor = Color(0xff121212);
@@ -17,9 +17,8 @@ const String kGroupsCollection = "Groups";
 
 const List<String> adminEmails = [
   "a.abdelgany2656@su.edu.eg",
-  // "admin2@university.edu", // إضافة أي إيميلات أخرى للأدمن
+  // "admin2@university.edu", 
 ];
 
-// إعدادات التطبيق
 const double kDefaultPadding = 16.0;
 const double kDefaultBorderRadius = 12.0;

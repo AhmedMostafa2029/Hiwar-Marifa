@@ -335,7 +335,7 @@ class _ChatPageState extends State<ChatPage> {
               IconButton(
                 icon: chatProvider.isSending
                     ? const CircularProgressIndicator()
-                    : const Icon(Icons.send, color: kPrimaryColor),
+                    : const Icon(Icons.send, color: kAccentColor),
                 onPressed: chatProvider.isSending
                     ? null
                     : () => _sendMessage(chatProvider),

@@ -182,7 +182,7 @@ class _LoginPageState extends State<LoginPage> {
               },
               child: Text(
                 'Forgot Password?',
-                style: TextStyle(color: kPrimaryColor, fontSize: 14),
+                style: TextStyle(color: kPrimaryColor, fontSize: 15),
               ),
             ),
           ),
@@ -250,7 +250,7 @@ class _LoginPageState extends State<LoginPage> {
             },
             child: Text(
               'Resend verification email?',
-              style: TextStyle(color: kPrimaryColor, fontSize: 14),
+              style: TextStyle(color: kPrimaryColor, fontSize: 15),
             ),
           ),
           const SizedBox(height: 24),

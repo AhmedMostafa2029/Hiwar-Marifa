@@ -146,21 +146,21 @@ class NotificationsPage extends StatelessWidget {
         });
   }
 
-  Future<void> _markAllAsRead(String userEmail) async {
-    final notifications = await FirebaseFirestore.instance
-        .collection('notifications')
-        .where('isBroadcast', isEqualTo: true)
-        .where('recipientEmails', arrayContains: userEmail)
-        .get();
+  // Future<void> _markAllAsRead(String userEmail) async {
+  //   final notifications = await FirebaseFirestore.instance
+  //       .collection('notifications')
+  //       .where('isBroadcast', isEqualTo: true)
+  //       .where('recipientEmails', arrayContains: userEmail)
+  //       .get();
 
-    final batch = FirebaseFirestore.instance.batch();
-    for (final doc in notifications.docs) {
-      batch.update(doc.reference, {
-        'readBy': FieldValue.arrayUnion([userEmail]),
-      });
-    }
-    await batch.commit();
-  }
+  //   final batch = FirebaseFirestore.instance.batch();
+  //   for (final doc in notifications.docs) {
+  //     batch.update(doc.reference, {
+  //       'readBy': FieldValue.arrayUnion([userEmail]),
+  //     });
+  //   }
+  //   await batch.commit();
+  // }
 
   Future<void> _deleteNotificationForUser(
     String notificationId,
