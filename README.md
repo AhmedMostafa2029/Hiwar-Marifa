@@ -8,7 +8,7 @@ Hiwar Marifa app is a world for Software engineers to chat with each other
 <!--   <img src="https://drive.google.com/uc?export=view&id=1Abulx3bZwA8i-LxlFw0erbnnl5WmS1PU" alt="Hiwar Marifa Logo Dark" width="200"/> -->
 <!-- </p> -->
 
-![Alt text](https://drive.google.com/file/d/1Abulx3bZwA8i-LxlFw0erbnnl5WmS1PU/view?usp=sharing)(https://github.com/AhmedMostafa2029/)
+![Alt text](https://drive.google.com/file/d/1Abulx3bZwA8i-LxlFw0erbnnl5WmS1PU/view?usp=sharing)
 ---
 
 ## ✨ Features
