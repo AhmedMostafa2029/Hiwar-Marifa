@@ -2,11 +2,19 @@
 
 Hiwar Marifa app is a world for Software engineers to chat with each other
 
-<p align="left">
-<img src="assets/IMG-20250830-WA0024.jpg" alt="Hiwar Marifa Logo Light"  width="350"/> 
+
+
+
+| Splash                            | Register                              | Login                                |
+| --------------------------------- | ------------------------------------- | ------------------------------------ |
+| ![Splash](assets/IMG-20250830-WA0024.jpg) | ![Register](assets/IMG-20250830-WA0027.jpg) | ![LoginLight](assets/IMG-20250830-WA0025.jpg) |
+
+
+<!-- <p align="left"> -->
+<!-- <img src="assets/IMG-20250830-WA0024.jpg" alt="Hiwar Marifa Logo Light"  width="350"/>  -->
 <!--   <br/> -->
 <!--   <img src="https://drive.google.com/uc?export=view&id=1Abulx3bZwA8i-LxlFw0erbnnl5WmS1PU" alt="Hiwar Marifa Logo Dark" width="200"/> -->
-</p>
+<!-- </p> -->
 
 
 ---
