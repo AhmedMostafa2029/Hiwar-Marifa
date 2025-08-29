@@ -5,16 +5,10 @@ Hiwar Marifa app is a world for Software engineers to chat with each other
 
 
 
-| Splash                            | Register                              | Login                                |
-| --------------------------------- | ------------------------------------- | ------------------------------------ |
-| ![Splash](assets/IMG-20250830-WA0024.jpg) | ![Register](assets/IMG-20250830-WA0027.jpg) | ![LoginLight](assets/IMG-20250830-WA0025.jpg) |
+| Splash                                   | Register                                    | Login                                         |
+| -----------------------------------------| ------------------------------------------- | --------------------------------------------- |
+| ![Splash](assets/IMG-20250830-WA0024.jpg)| ![Register](assets/IMG-20250830-WA0027.jpg) | ![LoginLight](assets/IMG-20250830-WA0025.jpg) |
 
-
-<!-- <p align="left"> -->
-<!-- <img src="assets/IMG-20250830-WA0024.jpg" alt="Hiwar Marifa Logo Light"  width="350"/>  -->
-<!--   <br/> -->
-<!--   <img src="https://drive.google.com/uc?export=view&id=1Abulx3bZwA8i-LxlFw0erbnnl5WmS1PU" alt="Hiwar Marifa Logo Dark" width="200"/> -->
-<!-- </p> -->
 
 
 ---
@@ -44,9 +38,9 @@ Hiwar Marifa app is a world for Software engineers to chat with each other
 
 ## 📸 Screenshots
 
-| Splash                            | Register                              | Login                                |
+| chat 1                          | chat 2                              | Notification                                |
 | --------------------------------- | ------------------------------------- | ------------------------------------ |
-| ![Splash](screenshots/splash.png) | ![Register](screenshots/register.png) | ![LoginLight](screenshots/login.png) |
+| ![chat 1](assets/IMG-20250830-WA0019.jpg) | ![chat 2](assets/IMG-20250830-WA0015.jpg) | ![Notification](assets/IMG-20250830-WA0009.jpg) |
 
 | Mode (Light)                                | Mode (Dark)                               | Mode (Light)                             | Mode (Dark)                            |
 | ------------------------------------------- | ----------------------------------------- | ---------------------------------------- | -------------------------------------- |
