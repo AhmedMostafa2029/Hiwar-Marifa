@@ -1,5 +1,7 @@
-<h1>📲 Hiwar Marifa </h1> 
-
+<!-- <h1>📲 Hiwar Marifa </h1> --> 
+<div align="center">
+# 🚀 Hiwar Marifa
+</div>
 Hiwar Marifa app is a world for Software engineers to chat with each other
 
 
