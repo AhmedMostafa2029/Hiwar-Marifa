@@ -38,9 +38,9 @@ Hiwar Marifa app is a world for Software engineers to chat with each other
 
 ## 📸 Screenshots
 
-| chat 1                            | chat 2                                | Notification                         | Home Page                            |Group Setting                         |
+| chat 1                            | chat 2                                | Home Page                            |Group Setting                         | Notification                         |
 | --------------------------------- | ------------------------------------- | ------------------------------------ | ------------------------------------ | ------------------------------------ |
-| ![chat](assets/IMG-20250830-WA0019.jpg) | ![chat](assets/IMG-20250830-WA0015.jpg) | ![Noti](assets/IMG-20250830-WA0009.jpg) | ![Home](assets/IMG-20250830-WA0016.jpg) | ![set](assets/IMG-20250830-WA0022.jpg) |
+| ![chat](assets/IMG-20250830-WA0019.jpg) | ![chat](assets/IMG-20250830-WA0015.jpg) | ![Home](assets/IMG-20250830-WA0016.jpg) | ![set](assets/IMG-20250830-WA0022.jpg) | ![Noti](assets/IMG-20250830-WA0009.jpg) |
 
 | Mode (Light)                                | Mode (Dark)                               | Mode (Light)                             | Mode (Dark)                            |
 | ------------------------------------------- | ----------------------------------------- | ---------------------------------------- | -------------------------------------- |
